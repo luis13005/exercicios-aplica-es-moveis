@@ -1,6 +1,7 @@
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
-import { useState } from "react";
+import { useFocusEffect } from "expo-router";
+import { useCallback, useState } from "react";
 import { TextInput, TouchableOpacity, StyleSheet } from "react-native";
 
 export default function ImcScreen() {
@@ -10,6 +11,20 @@ export default function ImcScreen() {
   const [classificacao, setClassificacao] = useState<string | null>(null);
   const [focusPeso, setFocusPeso] = useState(false);
   const [focusAltura, setFocusAltura] = useState(false);
+
+  useFocusEffect(
+    useCallback(() => {
+      limpar();
+    }, [])
+  );
+
+
+  function limpar() {
+    setPeso('');
+    setResultado(null);
+    setAltura('');
+    setClassificacao(null);
+  }
 
   function calcularIMC() {
     const p = parseFloat(peso.replace(',', '.'));

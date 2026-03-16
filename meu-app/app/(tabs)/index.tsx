@@ -27,22 +27,6 @@ export default function HomeScreen() {
               <ThemedText type="subtitle">Exercício 1 - Calcular IMC</ThemedText>
             </Link.Trigger>
             <Link.Preview />
-            <Link.Menu>
-              <Link.MenuAction title="Action" icon="cube" onPress={() => alert('Action pressed')} />
-              <Link.MenuAction
-                title="Share"
-                icon="square.and.arrow.up"
-                onPress={() => alert('Share pressed')}
-              />
-              <Link.Menu title="More" icon="ellipsis">
-                <Link.MenuAction
-                  title="Delete"
-                  icon="trash"
-                  destructive
-                  onPress={() => alert('Delete pressed')}
-                />
-              </Link.Menu>
-            </Link.Menu>
           </Link>
       </ThemedView>
       <ThemedView style={styles.titleContainer}>
@@ -51,22 +35,30 @@ export default function HomeScreen() {
             <ThemedText type="subtitle">Exercício 2 - Formatar Nome Completo</ThemedText>
           </Link.Trigger>
           <Link.Preview />
-          <Link.Menu>
-            <Link.MenuAction title="Action" icon="cube" onPress={() => alert('Action pressed')} />
-            <Link.MenuAction
-              title="Share"
-              icon="square.and.arrow.up"
-              onPress={() => alert('Share pressed')}
-            />
-            <Link.Menu title="More" icon="ellipsis">
-              <Link.MenuAction
-                title="Delete"
-                icon="trash"
-                destructive
-                onPress={() => alert('Delete pressed')}
-              />
-            </Link.Menu>
-          </Link.Menu>
+        </Link>
+      </ThemedView>
+      <ThemedView style={styles.titleContainer}>
+        <Link href="/maioridade">
+          <Link.Trigger>
+            <ThemedText type="subtitle">Exercício 3 - Verificar Maioridade</ThemedText>
+          </Link.Trigger>
+          <Link.Preview />
+        </Link>
+      </ThemedView>
+       <ThemedView style={styles.titleContainer}>
+        <Link href="/produto">
+          <Link.Trigger>
+            <ThemedText type="subtitle">Exercício 4 -  Interface de Produto</ThemedText>
+          </Link.Trigger>
+          <Link.Preview />
+        </Link>
+      </ThemedView>
+      <ThemedView style={styles.titleContainer}>
+        <Link href="/pares">
+          <Link.Trigger>
+            <ThemedText type="subtitle">Exercício 5 -  Filtrar numeros pares</ThemedText>
+          </Link.Trigger>
+          <Link.Preview />
         </Link>
       </ThemedView>
     </ParallaxScrollView>

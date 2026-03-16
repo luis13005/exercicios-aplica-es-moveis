@@ -45,6 +45,27 @@ export default function TabLayout() {
           headerShown: false,
         }}
       />
+       <Tabs.Screen
+        name="maioridade/index"
+        options={{
+          href: null,
+          headerShown: false,
+        }}
+      />
+       <Tabs.Screen
+        name="produto/index"
+        options={{
+          href: null,
+          headerShown: false,
+        }}
+      />
+       <Tabs.Screen
+        name="pares/index"
+        options={{
+          href: null,
+          headerShown: false,
+        }}
+      />
   </Tabs>
   );
 }

@@ -1,6 +1,7 @@
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
-import { useState } from "react";
+import { useFocusEffect } from "expo-router";
+import { useCallback, useState } from "react";
 import { Alert, TextInput, TouchableOpacity } from "react-native";
 import { StyleSheet } from "react-native";
 
@@ -11,6 +12,18 @@ export default function NameFormatScreen() {
  const [focusSobreNome,setFocusSobreNome] = useState(false)
  const [resultado, setResultado] = useState<string | null>(null);
  
+ useFocusEffect(
+   useCallback(() => {
+     limpar();
+   }, [])
+ );
+
+ function limpar() {
+   setNome('');
+   setSobrenome('');
+   setResultado(null);
+ }
+
 function formatNome(){
     console.log('Nome digitado:', nome);
     console.log('Nome vazio?:', !nome || nome.trim() === '');
